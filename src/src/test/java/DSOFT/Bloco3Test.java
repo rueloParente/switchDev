@@ -98,5 +98,23 @@ class Bloco3Test {
         //Assert
         assertEquals(expected, result);
     }
-
+    //Exercise 3 - number of multiples of two numbers
+    @Test
+    void shouldReturnNumberOfMultiplesOfTwoNumbers() {
+        //Arrange
+        int expected = 1;
+        //Act
+        int result = Bloco3.numberMultiplesOfTwoNumbers(2, 3, 2, 6);
+        //Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    void shouldReturnZeroIfNoCommonMultiples() {
+        //Arrange
+        int expected = 0;
+        //Act
+        int result = Bloco3.numberMultiplesOfTwoNumbers(2, 3, 2, 4);
+        //Assert
+        assertEquals(expected, result);
+    }
 }
