@@ -15,17 +15,15 @@ public class Bloco3 {
     public static int numberMultiplesInRange(int num, int min, int max){
         int result = 0;
         for (int i=min; i<=max; i++){
-            if (num==0) return multiplesOfZeroInRange(min, max); // as 0 is multiple of all numbers
-            else if (i % num == 0) result++;
+            if (isMultiple(num, i)) result++;
         }
         return result;
     }
-    private static int multiplesOfZeroInRange (int min, int max) {
-        int result = 0;
-        for (int i = min; i <= max; i++) {
-            result++;
-        }
-        return result;
+
+// Exercise 3 - calculating the number of multiples of two given numbers
+    public static boolean isMultiple (int num, int div){
+        if (num == 0) return true;
+        else return div % num == 0;
     }
 
     private static int validationInputFactorial(int num) {
