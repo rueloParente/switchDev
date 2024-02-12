@@ -117,4 +117,24 @@ class Bloco3Test {
         //Assert
         assertEquals(expected, result);
     }
+    // Exercise 4 - Sum of multiples of two numbers
+    @Test
+    void shouldReturnSumOfMultiplesOfTwoNumbers() {
+        //Arrange
+        int expected = 6;
+        //Act
+        int result = Bloco3.sumMultiplesOfTwoNumbers(2, 3, 2, 6);
+        //Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    void shouldReturnZeroIfNoMultiplesToSum() {
+        //Arrange
+        int expected = 0;
+        //Act
+        int result = Bloco3.sumMultiplesOfTwoNumbers(2, 3, 2, 4);
+        //Assert
+        assertEquals(expected, result);
+    }
+
 }

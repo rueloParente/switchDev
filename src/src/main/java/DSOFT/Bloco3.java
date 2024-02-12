@@ -28,6 +28,15 @@ public class Bloco3 {
         }
         return result;
     }
+// Exercise 4 - Sum of multiples of two numbers
+    public static int sumMultiplesOfTwoNumbers (int num1, int num2, int min, int max){
+        int result = 0;
+        for (int i=min; i<=max; i++){
+            if (isMultiple(num1, i) && isMultiple(num2, i)) result += i;
+        }
+        return result;
+    }
+
     public static boolean isMultiple (int num, int div){
         if (num == 0) return true;
         else return div % num == 0;
