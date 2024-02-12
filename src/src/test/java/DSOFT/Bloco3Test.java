@@ -1,6 +1,5 @@
 package DSOFT;
 
-import DSOFT.Bloco3;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -52,4 +51,52 @@ class Bloco3Test {
         //Assert
         assertEquals(expected, result);
     }
+    //Exercise 2 - number of multiples of given number in given interval
+    @Test
+    void shouldReturnNumberOfMultiples() {
+        //Arrange
+        int expected = 2;
+        //Act
+        int result = Bloco3.numberMultiplesInRange(2, 2, 4);
+        //Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    void shouldBeAbleToReturnMultiplesOfZero() {
+        //Arrange
+        int expected = 4;
+        //Act
+        int result = Bloco3.numberMultiplesInRange(0, 0, 3);
+        //Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    void shouldReturnZeroIfNoMultiples() {
+        //Arrange
+        int expected = 0;
+        //Act
+        int result = Bloco3.numberMultiplesInRange(3, 1, 2);
+        //Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    void shouldAllowForNegativeRange(){
+        //Arrange
+        int expected = 3;
+        //Act
+        int result = Bloco3.numberMultiplesInRange(2, -2, 2);
+        //Assert
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void shouldReturnZeroIfRangeIsInverted(){
+        //Arrange
+        int expected = 0;
+        //Act
+        int result = Bloco3.numberMultiplesInRange(2, 2, 1);
+        //Assert
+        assertEquals(expected, result);
+    }
+
 }
