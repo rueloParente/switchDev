@@ -1,17 +1,7 @@
-package DSOFT;
+package dsoft.bloco3;
 
-public class Bloco3 {
- // Exercise 1 - calculating the factorial
-    public static long numberFactorial (int num) {
-      if (validationInputFactorial(num) != 0) return validationInputFactorial(num);
-      long result = 1;
-        for (int i = 1; i <= num; i++) {
-            result *= i;
-        }
-        return result;
-    }
-
-// Exercise 2 - calculating the number of multiples of given number
+public class Multiples {
+    // Exercise 2 - calculating the number of multiples of given number
     public static int numberMultiplesInRange(int num, int min, int max){
         int result = 0;
         for (int i=min; i<=max; i++){
@@ -20,7 +10,7 @@ public class Bloco3 {
         return result;
     }
 
-// Exercise 3 - calculating the number of multiples of two given numbers
+    // Exercise 3 - calculating the number of multiples of two given numbers
     public static int numberMultiplesOfTwoNumbers (int num1, int num2, int min, int max){
         int result =0;
         for (int i=min; i <=max; i++){
@@ -28,7 +18,7 @@ public class Bloco3 {
         }
         return result;
     }
-// Exercise 4 - Sum of multiples of two numbers
+    // Exercise 4 - Sum of multiples of two numbers
     public static int sumMultiplesOfTwoNumbers (int num1, int num2, int min, int max){
         int result = 0;
         for (int i=min; i<=max; i++){
@@ -40,11 +30,5 @@ public class Bloco3 {
     public static boolean isMultiple (int num, int div){
         if (num == 0) return true;
         else return div % num == 0;
-    }
-
-    private static int validationInputFactorial(int num) {
-        if (num < 0) return -1;
-        else if (num > 20) return -2;
-        else return 0;
     }
 }
