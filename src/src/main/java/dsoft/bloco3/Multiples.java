@@ -1,7 +1,7 @@
 package dsoft.bloco3;
 
 public class Multiples {
-    // Exercise 2 - calculating the number of multiples of given number
+    // The number of multiples of a given integer in a given interval.
     public static int numberMultiplesInRange(int num, int min, int max){
         int result = 0;
         for (int i=min; i<=max; i++){
@@ -9,8 +9,7 @@ public class Multiples {
         }
         return result;
     }
-
-    // Exercise 3 - calculating the number of multiples of two given numbers
+    // The number of multiples of two integers in a given interval.
     public static int numberMultiplesOfTwoNumbers (int num1, int num2, int min, int max){
         int result =0;
         for (int i=min; i <=max; i++){
@@ -18,7 +17,7 @@ public class Multiples {
         }
         return result;
     }
-    // Exercise 4 - Sum of multiples of two numbers
+    // The sum of the multiples of two integers in a given interval.
     public static int sumMultiplesOfTwoNumbers (int num1, int num2, int min, int max){
         int result = 0;
         for (int i=min; i<=max; i++){
@@ -26,9 +25,9 @@ public class Multiples {
         }
         return result;
     }
-
     public static boolean isMultiple (int num, int div){
         if (num == 0) return true;
         else return div % num == 0;
     }
+
 }
