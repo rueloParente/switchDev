@@ -23,6 +23,25 @@ class NumberOperationsTest {
         //Assert
         assertEquals(expected, result);
     }
+    //Amstrong number
+    @Test
+    void shouldReturnTrueIfNumberIsAmstrong() {
+        //Arrange
+        boolean expected = true;
+        //Act
+        boolean result = NumberOperations.isNumberAmstrong(153);
+        //Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    void shouldReturnFalseIfNumberIsNotAmstrong() {
+        //Arrange
+        boolean expected = false;
+        //Act
+        boolean result = NumberOperations.isNumberAmstrong(123);
+        //Assert
+        assertEquals(expected, result);
+    }
 
 
 }

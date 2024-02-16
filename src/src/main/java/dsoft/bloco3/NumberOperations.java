@@ -8,4 +8,13 @@ public class NumberOperations {
         int invertedNum = Digits.arrayOfDigitsToNumber(invertedDigits);
         return (invertedNum==num);
     }
+    //Verify if number is Amstrong
+    public static boolean isNumberAmstrong (int num){
+        int[] digits = Digits.numberToArrayDigits(num);
+        int result = 0;
+        for (int digit: digits){
+            result += (int) Math.pow(digit, 3);
+        }
+        return result == num;
+    }
 }
