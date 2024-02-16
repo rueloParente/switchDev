@@ -51,6 +51,28 @@ public class Digits {
         }
         return result;
     }
+    //The number in the inverse order
+    public static int inverseNumber (int num){
+        int[] digits = numberToArrayDigits(num);
+        int[] invertedDigits = invertArrayOrder(digits);
+        if (num<0) return -arrayOfDigitsToNumber(invertedDigits);
+        else return arrayOfDigitsToNumber(invertedDigits);
+    }
+    public static int arrayOfDigitsToNumber(int[] array){
+        int result = 0;
+        for (int i = 0; i < array.length; i++){
+            result = result * 10 + array[i];
+        }
+        return result;
+    }
+
+    public static int[] invertArrayOrder (int[] array){
+        int[] invertedArray = new int[array.length];
+        for (int i=array.length-1, j=0; i>=0; i--, j++){
+            invertedArray[j] = array[i];
+        }
+        return invertedArray;
+    }
 
     public static int[] numberToArrayDigits(int num){
         if (num == 0) return new int[]{0};

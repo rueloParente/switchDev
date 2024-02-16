@@ -145,5 +145,71 @@ class DigitsTest {
         //Assert
         assertEquals(expected, result);
     }
+    //Inverted array
+    @Test
+    void shouldReturnInvertedArray() {
+        //Arrange
+        int[] expected = {5, 4, 3, 2, 1};
+        //Act
+        int[] result = Digits.invertArrayOrder(new int[]{1, 2, 3, 4, 5});
+        //Assert
+        assertArrayEquals(expected, result);
+    }
+    @Test
+    void shouldReturnInvertedArrayEmpty() {
+        //Arrange
+        int[] expected = {};
+        //Act
+        int[] result = Digits.invertArrayOrder(new int[]{});
+        //Assert
+        assertArrayEquals(expected, result);
+    }
+    @Test
+    void shouldReturnInvertedArrayOneElement() {
+        //Arrange
+        int[] expected = {0};
+        //Act
+        int[] result = Digits.invertArrayOrder(new int[]{0});
+        //Assert
+        assertArrayEquals(expected, result);
+    }
+    //Array of digits to number
+    @Test
+    void shouldReturnArrayToNumber() {
+        //Arrange
+        int expected = 12345;
+        //Act
+        int result = Digits.arrayOfDigitsToNumber(new int[]{1, 2, 3, 4, 5});
+        //Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    void shouldReturnArrayToNumberEmpty() {
+        //Arrange
+        int expected = 0;
+        //Act
+        int result = Digits.arrayOfDigitsToNumber(new int[]{});
+        //Assert
+        assertEquals(expected, result);
+    }
+    //The number in the inverse order
+    @Test
+    void shouldReturnInverseNumber() {
+        //Arrange
+        int expected = 54321;
+        //Act
+        int result = Digits.inverseNumber(12345);
+        //Assert
+        assertEquals(expected, result);
+    }
+    @Test
+    void shouldReturnInverseNumberNegative() {
+        //Arrange
+        int expected = -54321;
+        //Act
+        int result = Digits.inverseNumber(-12345);
+        //Assert
+        assertEquals(expected, result);
+    }
 
 }
