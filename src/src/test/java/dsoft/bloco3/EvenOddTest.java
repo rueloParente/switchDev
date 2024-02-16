@@ -26,7 +26,7 @@ class EvenOddTest {
     @Test
     void shouldReturnSumOddNumbersInRange() {
         //Arrange
-        int expected = 3;
+        int expected = 9;
         //Act
         int result = EvenOdd.sumOddNumbersInRange(1, 5);
         //Assert

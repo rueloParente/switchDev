@@ -14,7 +14,7 @@ public class EvenOdd {
     //The sum of all even numbers in a given interval.
     public static int sumOddNumbersInRange (int min, int max){
         int result = 0;
-        for (int i=min; i<max; i++){
+        for (int i=min; i<=max; i++){
             if (!isNumberEven(i)) result += i;
         }
         return result;

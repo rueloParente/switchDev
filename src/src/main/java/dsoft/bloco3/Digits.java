@@ -5,6 +5,53 @@ public class Digits {
     public static int numberDigits (int num){
         return numberToArrayDigits(num).length;
     }
+
+    //The number of even digits in a integer
+    public static int numberEvenDigits (int num){
+        int[] digits = numberToArrayDigits(num);
+        int result = 0;
+        for (int i = 0; i < digits.length; i++){
+            if (EvenOdd.isNumberEven(digits[i])) result++;
+        }
+        return result;
+    }
+    //The number of odd digits in a integer
+    public static int numberOddDigits (int num){
+        int[] digits = numberToArrayDigits(num);
+        int result = 0;
+        for (int i = 0; i < digits.length; i++){
+            if (!EvenOdd.isNumberEven(digits[i])) result++;
+        }
+        return result;
+    }
+    //The sum of digits in a integer
+    public static int sumDigits (int num){
+        int[] digits = numberToArrayDigits(num);
+        int result = 0;
+        for (int i = 0; i < digits.length; i++){
+            result += digits[i];
+        }
+        return result;
+    }
+    //The sum of even digits in a integer
+    public static int sumEvenDigits (int num){
+        int[] digits = numberToArrayDigits(num);
+        int result = 0;
+        for (int i = 0; i < digits.length; i++){
+            if (EvenOdd.isNumberEven(digits[i])) result += digits[i];
+        }
+        return result;
+    }
+    //The sum of odd digits in a integer
+    public static int sumOddDigits (int num){
+        int[] digits = numberToArrayDigits(num);
+        int result = 0;
+        for (int i = 0; i < digits.length; i++){
+            if (!EvenOdd.isNumberEven(digits[i])) result += digits[i];
+        }
+        return result;
+    }
+
     public static int[] numberToArrayDigits(int num){
         if (num == 0) return new int[]{0};
         int size = (int)Math.log10(Math.abs(num)) + 1;
